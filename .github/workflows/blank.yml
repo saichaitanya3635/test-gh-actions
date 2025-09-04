@@ -35,8 +35,11 @@ jobs:
 
       
        - name: Conditional Gradle Clean
+         env:
+          runGradleClean: ${{ github.event.inputs.runGradleClean }}
          run: |
-           if [ $runGradleClean -eq 'true' ]; then
+          
+           if [ "$runGradleClean" = 'true' ]; then
               echo "Running gradle clean..."
            else 
               echo "Skipping gradle clean."
