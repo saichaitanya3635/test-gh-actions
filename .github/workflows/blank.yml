@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
    inputs:
       runGradleClean:
-        description: "Whether to run gradle clean"
+        description: "runGradleClean"
         required: true
         default: true
 
