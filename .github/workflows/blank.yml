@@ -36,10 +36,10 @@ jobs:
       
        - name: Conditional Gradle Clean
          run: |
-           if [ $runGradleClean -eq 'true' ] {
+           if [ $runGradleClean -eq 'true' ] ;
               echo "Running gradle clean..."
-            } else {
+           else 
               echo "Skipping gradle clean."
-            }
+           fi
           
           
